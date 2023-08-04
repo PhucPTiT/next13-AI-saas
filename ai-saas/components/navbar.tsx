@@ -1,7 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
 import { UserButton } from "@clerk/nextjs";
-import SidebarMb from "@/components/sidebarMb";
+// import SidebarMb from "@/components/sidebarMb";
+import dynamic from "next/dynamic";
+const SidebarMb = dynamic(() => import('@/components/sidebarMb'), {
+    ssr: false
+  })
 
 const Navbar = () => {
     return ( 

@@ -4,18 +4,8 @@ import { Button } from "@/components/ui/button";
 import {Menu} from "lucide-react"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import Sidebar from "./sidebar";
-import { useEffect, useState } from "react";
 
-const SidebarMb = () => {
-    const [isMounted, setIsMounted] = useState(false);
-
-    useEffect(() => {
-        setIsMounted(true);
-    }, [])
-
-    if(!isMounted) {
-        return null;
-    }
+const SidebarMb = ():React.JSX.Element => {
     return ( 
         <Sheet>
             <SheetTrigger>
